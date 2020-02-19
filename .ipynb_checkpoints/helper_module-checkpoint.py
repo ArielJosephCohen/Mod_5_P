@@ -44,8 +44,8 @@ from sklearn.decomposition import PCA
 from sklearn.utils import resample
 from sklearn.externals.six import StringIO
 
-def check_correlation(dataframe,lst):
-    return sum((abs(dataframe[lst].corr()>=0.7)).sum()>1)==0
+def check_correlation(dataframe,lst,threshold):
+    return sum((abs(dataframe[lst].corr()>=threshold)).sum()>1)==0
 
 def create_num_list():
     """
